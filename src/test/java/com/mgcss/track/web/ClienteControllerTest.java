@@ -21,6 +21,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(ClienteController.class)
 class ClienteControllerTest {
 
+    @org.springframework.boot.test.mock.mockito.MockBean
+    private io.micrometer.core.instrument.MeterRegistry meterRegistry;
+
     @Autowired
     private MockMvc mockMvc;
 

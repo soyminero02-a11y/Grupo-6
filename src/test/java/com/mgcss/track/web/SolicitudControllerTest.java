@@ -29,6 +29,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @WebMvcTest(SolicitudController.class)
 class SolicitudControllerTest {
 
+    @org.springframework.boot.test.mock.mockito.MockBean
+    private io.micrometer.core.instrument.MeterRegistry meterRegistry;
+
     @Autowired
     private MockMvc mockMvc; 
 
