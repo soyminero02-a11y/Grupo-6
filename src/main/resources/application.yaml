@@ -2,5 +2,11 @@ spring:
   application:
     name: MGCSS-Track
 
-management.endpoints.web.exposure.include=health,info,prometheus
-management.endpoint.prometheus.enabled=true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,prometheus"
+  endpoint:
+    prometheus:
+      enabled: true
